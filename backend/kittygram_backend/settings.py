@@ -6,9 +6,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = SECRET_KEY = os.getenv('SECRET_KEY', 'default_stub_key')
 
-DEBUG = False
+DEBUG: bool = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['158.160.7.97', '127.0.0.1', 'lockalhost', 'fuckinunicorns.zapto.org']
+ALLOWED_HOSTS = list[str] = os.getenv('ALLOWED_HOSTS', '127.0.0.1, lockalhost').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
