@@ -4,11 +4,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = SECRET_KEY = os.getenv('SECRET_KEY', 'default_stub_key')
+SECRET_KEY = os.getenv('SECRET_KEY', 'default_stub_key')
 
-DEBUG: bool = os.getenv('DEBUG', 'False') == 'True'
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = list[str] = os.getenv('ALLOWED_HOSTS', '127.0.0.1, lockalhost').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1, localhost').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
