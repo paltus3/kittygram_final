@@ -4,9 +4,9 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-cg6*%6d51ef8f#4!r3*$vmxm4)abgjw8mo!4y-q*uq1!4$-89$'
+SECRET_KEY = SECRET_KEY = os.getenv('SECRET_KEY', 'default_stub_key')
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['158.160.7.97', '127.0.0.1', 'lockalhost', 'fuckinunicorns.zapto.org']
 
